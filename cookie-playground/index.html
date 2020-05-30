@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.1/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
+    <title>Cookie playground</title>
+</head>
+<body>
+    <style>
+        form {
+            margin: 2em auto;
+            max-width: 20em;
+        }
+        
+        form.remove-form {
+            margin-top: 4em;
+        }
+
+        fieldset {
+            padding: 0 2em;
+        }
+
+        .pure-form-stacked input,
+        .pure-form-stacked select {
+            width: 100%;
+        }
+
+        .pure-form-stacked input[type=checkbox] {
+            width: auto;
+        }
+        
+        .pure-form-stacked input[type=submit] {
+            margin-top: 1em;
+        }
+        
+        .pure-form-stacked .button-remove {
+            background-color: rgb(202, 60, 60);
+        }
+    </style>
+    <form class="pure-form pure-form-stacked" action="/add" method="GET">
+        <h1>Add cookie</h1>
+        <fieldset>
+            <label for="name">Name</label>
+            <input name="name" type="text">
+    
+            <label for="value">Value</label>
+            <input name="value" type="text">
+            
+            <label for="maxAge">MaxAge</label>
+            <input name="maxAge" type="text" value="31536000">
+            <label for="secure" class="pure-checkbox">
+                <input name="secure" type="checkbox"> Secure
+            </label>
+            <label for="httpOnly" class="pure-checkbox">
+                <input name="httpOnly" type="checkbox"> httpOnly
+            </label>
+            <label for="sameSite" class="pure-checkbox">SameSite</label>
+                <select name="sameSite">
+                    <option value=""></option>
+                    <option value="None">None</option>
+                    <option value="Lax">Lax</option>
+                    <option value="Strict">Strict</option>
+                </select>   
+    
+            <input type="submit" class="pure-button pure-button-primary" value="Add Cookie">
+        </fieldset>
+    </form>
+    <form class="pure-form pure-form-stacked remove-form" action="/remove" method="GET">
+        <h1>Remove cookie</h1>
+        <fieldset>
+            <label for="name">Name</label>
+            <input name="name" type="text">
+            <input type="submit" class="pure-button pure-button-primary button-remove" value="Remove Cookie">
+        </fieldset>
+    </form>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+    "version": 2,
+    "name": "execute-js",
+    "public": true,
+    "builds": [
+        { "src": "index.html", "use": "@now/static" },
+        { "src": "api/*.js", "use": "@now/node" }
+    ],
+    "routes": [
+        { "src": "/", "dest": "/index.html" },
+        { "src": "/execute", "dest": "api/javascript.js" }
+    ]
+}

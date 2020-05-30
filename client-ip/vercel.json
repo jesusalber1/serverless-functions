@@ -1,0 +1,11 @@
+{
+    "version": 2,
+    "name": "client-ip",
+    "public": true,
+    "builds": [
+        { "src": "api/*.js", "use": "@now/node" }
+    ],
+    "routes": [
+        { "src": "/", "dest": "api/ip.js" }
+    ]
+}

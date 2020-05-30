@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.1/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
+        <title>Execute JS on browser</title>
+    </head>
+    <body>
+        <style>
+            form {
+                margin: 2em auto;
+                max-width: 20em;
+            }
+
+            fieldset {
+                padding: 0 2em;
+            }
+            
+            .pure-form-stacked input{
+                width: 100%;
+            }
+            
+            .pure-form-stacked input[type=submit] {
+                margin-top: 1em;
+            }
+
+            p.note {
+                text-align: center;
+            }
+        </style>
+        <form class="pure-form pure-form-stacked" action="/execute" method="GET">
+            <h1>Execute JS code</h1>
+            <fieldset>
+                <label for="code">Code</label>
+                <input name="code" type="text">
+                <input type="submit" class="pure-button pure-button-primary" value="Execute">
+                <p class="note"><small>Use <strong>JSON.stringify()</strong> to print objects</small></p>
+            </fieldset>
+        </form>
+    </body>
+</html>

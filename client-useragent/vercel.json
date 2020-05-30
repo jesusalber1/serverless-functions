@@ -1,0 +1,11 @@
+{
+    "version": 2,
+    "name": "client-useragent",
+    "public": true,
+    "builds": [
+        { "src": "api/*.js", "use": "@now/node" }
+    ],
+    "routes": [
+        { "src": "/", "dest": "api/user-agent.js" }
+    ]
+}
