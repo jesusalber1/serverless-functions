@@ -1,4 +1,4 @@
-module.exports = async (req, res) => {
+module.exports = (req, res) => {
     const remoteAddress = req.headers['x-real-ip']
     const { output = null } = req.query
 
