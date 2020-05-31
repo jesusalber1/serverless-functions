@@ -9,7 +9,8 @@
 </head>
 <body>
     <style>
-        form {
+        form,
+        section {
             margin: 2em auto;
             max-width: 20em;
         }
@@ -23,7 +24,8 @@
         }
 
         .pure-form-stacked input,
-        .pure-form-stacked select {
+        .pure-form-stacked select,
+        .pure-form-stacked a {
             width: 100%;
         }
 
@@ -38,9 +40,14 @@
         .pure-form-stacked .button-remove {
             background-color: rgb(202, 60, 60);
         }
+
+        .button-success {
+            background: rgb(28, 184, 65);
+            color: #FFF;
+        }
     </style>
     <form class="pure-form pure-form-stacked" action="/add" method="GET">
-        <h1>Add cookie</h1>
+        <h2>Add cookie</h2>
         <fieldset>
             <label for="name">Name</label>
             <input name="name" type="text">
@@ -67,8 +74,12 @@
             <input type="submit" class="pure-button pure-button-primary" value="Add Cookie">
         </fieldset>
     </form>
+    <section class="pure-form-stacked">
+        <h2>List cookies</h2>
+        <a class="pure-button button-success" href="/list">List cookies</a>
+    </section>
     <form class="pure-form pure-form-stacked remove-form" action="/remove" method="GET">
-        <h1>Remove cookie</h1>
+        <h2>Remove cookie</h2>
         <fieldset>
             <label for="name">Name</label>
             <input name="name" type="text">
