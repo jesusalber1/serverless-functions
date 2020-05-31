@@ -7,12 +7,12 @@ Check it out on [dns.jesusalberto.me](https://dns.jesusalberto.me).
 There is a required parameter.
 | Parameter |     Value     | Expected output |
 | :-------: | :-----------: | :-------------: |
-| hostname  |   <domain>    |   JSON object   |
+|  domain   |   <domain>    |   JSON object   |
 
 ## Examples
 ```bash
 # Example 1: both IPv4 and IPv6 addresses are available
-curl -s 'https://dns.jesusalberto.me?hostname=google.com' | jq
+curl -s 'https://dns.jesusalberto.me?domain=google.com' | jq
 {
   "ipv4": [
     "216.58.194.174"
@@ -23,7 +23,7 @@ curl -s 'https://dns.jesusalberto.me?hostname=google.com' | jq
 }
 
 # Example 2: only one type of address available
-curl -s 'https://dns.jesusalberto.me?hostname=github.com' | jq
+curl -s 'https://dns.jesusalberto.me?domain=github.com' | jq
 {
   "ipv4": [
     "192.30.255.113"
@@ -32,7 +32,7 @@ curl -s 'https://dns.jesusalberto.me?hostname=github.com' | jq
 }
 
 # Example 3: neither IPv4 nor IPv6 addresses found
-curl -s 'https://dns.jesusalberto.me?hostname=github.error' | jq   
+curl -s 'https://dns.jesusalberto.me?domain=github.error' | jq   
 {
   "ipv4": [],
   "ipv6": []
