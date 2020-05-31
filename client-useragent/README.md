@@ -4,7 +4,7 @@ Return client's User Agent.
 Check it out on [ua.jesusalberto.me](https://ua.jesusalberto.me).
 
 ## Parameters
-There is no parameters.
+There are no parameters.
 | Parameter |     Value     | Expected output |
 | :-------: | :-----------: | :-------------: |
 |     -     |       -       |   Plain text    |
